@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
-import 'package:spotify_clone/core/utils/app_router.dart';
+import 'package:spotify_clone/core/utils/routing/app_router.dart';
 import 'package:spotify_clone/core/utils/assets/app_assets.dart';
 
 class SplashView extends StatefulWidget {

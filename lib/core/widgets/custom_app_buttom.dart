@@ -21,6 +21,6 @@ class CustomAppButtom extends StatelessWidget {
       
       onPressed: onPressed, 
       
-      child: Text(title,style: AppStyles.font16WhiteSemiBold,),);
+      child: Text(title,style: AppStyles.font18WhiteSemiBold,),);
   }
 }

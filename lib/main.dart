@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:spotify_clone/core/utils/app_router.dart';
+import 'package:spotify_clone/core/utils/routing/app_router.dart';
 import 'package:spotify_clone/core/utils/theme/app_theming.dart';
 
 void main() {
