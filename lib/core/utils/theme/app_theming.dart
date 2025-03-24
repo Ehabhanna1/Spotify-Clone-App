@@ -8,6 +8,7 @@ class AppTheming{
 
     primaryColor:  AppColors.primary,
     brightness: Brightness.light,
+    fontFamily: 'Satoshi',
     scaffoldBackgroundColor: AppColors.lightBackground,
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
@@ -27,6 +28,7 @@ class AppTheming{
 
     primaryColor:  AppColors.primary,
     brightness: Brightness.dark,
+    fontFamily: 'Satoshi',
     scaffoldBackgroundColor: AppColors.darkBackground,
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
