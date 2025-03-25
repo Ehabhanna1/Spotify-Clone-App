@@ -35,7 +35,7 @@ class ChooseModeView extends StatelessWidget {
                   child: SvgPicture.asset(AppAssets.logo),
                 ),
                 Spacer(),
-                Text("Choose Mode", style: AppStyles.font18WhiteBold),
+                Text("Choose Mode", style: AppStyles.font18Bold.copyWith(color: Colors.white),),
                 verticalSpace(25),
                  Row(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -68,7 +68,7 @@ class ChooseModeView extends StatelessWidget {
                             verticalSpace(10),
                             Text(
                               "Dark Mode",
-                              style: AppStyles.font16WhiteRegular,
+                              style: AppStyles.font16Regular.copyWith(color: Colors.white),
                             ),
                           ],
                         ),
@@ -78,7 +78,7 @@ class ChooseModeView extends StatelessWidget {
                             GestureDetector(
                               onTap: () {
                                 context.read<ThemingCubit>().updateTheme(
-                                  ThemeMode.dark,
+                                  ThemeMode.light,
                                 );
                               },
                               child: ClipOval(
@@ -102,7 +102,7 @@ class ChooseModeView extends StatelessWidget {
                             verticalSpace(10),
                             Text(
                               "Light Mode",
-                              style: AppStyles.font16WhiteRegular,
+                              style: AppStyles.font16Regular.copyWith(color: Colors.white),
                             ),
                           ],
                         ),

@@ -3,27 +3,27 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:spotify_clone/core/utils/theme/font_weight_helper.dart';
 
 class AppStyles {
-  static TextStyle font24WhiteBold = TextStyle(
-      fontSize: 24.sp, fontWeight: FontWeightHelper.bold, color: Colors.white);
 
-  static TextStyle font18WhiteBold = TextStyle(
-      fontSize: 18.sp, fontWeight: FontWeightHelper.bold, color: Colors.white);
-      static TextStyle font20WhiteBold = TextStyle(
-      fontSize: 20.sp, fontWeight: FontWeightHelper.bold, color: Colors.white);
 
-  static TextStyle font13GreyMedium = TextStyle(
-      fontSize: 13.sp, fontWeight: FontWeightHelper.medium, color: Colors.grey);
+  static TextStyle font18Bold = TextStyle(
+      fontSize: 18.sp, fontWeight: FontWeightHelper.bold,);
+      static TextStyle font20Bold = TextStyle(
+      fontSize: 20.sp, fontWeight: FontWeightHelper.bold, );
 
-      static TextStyle font16WhiteSemiBold = TextStyle(
-      fontSize: 16.sp, fontWeight: FontWeightHelper.semiBold, color: Colors.white);
+  static TextStyle font13Medium = TextStyle(
+      fontSize: 13.sp, fontWeight: FontWeightHelper.medium, );
 
-      static TextStyle font18WhiteSemiBold = TextStyle(
-      fontSize: 18.sp, fontWeight: FontWeightHelper.semiBold, color: Colors.white);
+      static TextStyle font16SemiBold = TextStyle(
+      fontSize: 16.sp, fontWeight: FontWeightHelper.semiBold, );
 
-      static TextStyle font16WhiteRegular = TextStyle(
-      fontSize: 16.sp, fontWeight: FontWeightHelper.regular, color: Colors.white);
+      static TextStyle font18SemiBold = TextStyle(
+      fontSize: 18.sp, fontWeight: FontWeightHelper.semiBold,color: Colors.white); 
+
+      static TextStyle font16Regular = TextStyle(
+      fontSize: 16.sp, fontWeight: FontWeightHelper.regular, );
   
-  
+    static TextStyle font25Bold = TextStyle(
+      fontSize: 25.sp, fontWeight: FontWeightHelper.bold, );
   
  
 }

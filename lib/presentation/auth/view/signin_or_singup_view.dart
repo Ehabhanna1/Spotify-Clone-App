@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:go_router/go_router.dart';
 import 'package:spotify_clone/core/helper/is_dark_mode.dart';
 import 'package:spotify_clone/core/utils/assets/app_assets.dart';
 import 'package:spotify_clone/core/utils/constant/spacing.dart';
+import 'package:spotify_clone/core/utils/routing/app_router.dart';
 import 'package:spotify_clone/core/utils/theme/app_styles.dart';
 import 'package:spotify_clone/core/widgets/custom_app_bar.dart';
 import 'package:spotify_clone/core/widgets/custom_app_buttom.dart';
@@ -44,23 +47,28 @@ class SigninOrSingupView extends StatelessWidget {
                   verticalSpace(50),
                   Text(
                     "Enjoy Lisening to favorite Music",
-                    style: AppStyles.font20WhiteBold,
+                    style: AppStyles.font20Bold,
                   ),
                   verticalSpace(20),
                   Text(
                      'Spotify is a proprietary Swedish audio .. \n streaming and  media services provider ',
-                     style: AppStyles.font13GreyMedium,
+                     style: AppStyles.font13Medium,
                   ),
                   verticalSpace(25),
                   Row(
                     children: [
                       Expanded(
                         flex: 1,
-                        child: CustomAppButtom(title: "Sign In",onPressed: (){},)),
+                        child: CustomAppButtom(title: "Sign In",
+                        onPressed: (){
+                          GoRouter.of(context).push(AppRouter.kSignInView);
+                        },)),
                       horizontalSpace(20),
                       Expanded(
                         flex: 1,
-                        child: TextButton(onPressed: (){},
+                        child: TextButton(onPressed: (){
+                          GoRouter.of(context).push(AppRouter.kSignUpView);
+                        },
                          child:Text("Sign Up",style: TextStyle(
 
                           fontSize: 18,

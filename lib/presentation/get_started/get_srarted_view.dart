@@ -41,10 +41,10 @@ class GetSrartedView extends StatelessWidget {
                     alignment: Alignment.topCenter,
                     child: SvgPicture.asset(AppAssets.logo)),
                   Spacer(),
-                  Text("Enjoy Lisening to favorite Music",style: AppStyles.font18WhiteBold),
+                  Text("Enjoy Lisening to favorite Music",style: AppStyles.font20Bold.copyWith(color: Colors.white),),
                   verticalSpace(25),
                   Text('Lorem ipsum dolor sit amet, consectetur \n adipiscing elit, sed do eiusmod tempor \n incididunt ut labore et dolore magna aliqua.',
-                  style: AppStyles.font13GreyMedium,
+                  style: AppStyles.font13Medium.copyWith(color: Colors.white),
                   textAlign: TextAlign.center,
                   ),
             

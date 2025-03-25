@@ -23,14 +23,22 @@ class AppTheme {
           borderRadius: BorderRadius.circular(30),
           borderSide: const BorderSide(
             color: Colors.white,
-            width: 0.4
+            width: 1
           )
         ),
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(30),
           borderSide: const BorderSide(
             color: Colors.black,
-            width: 0.4
+            width: 1
+          )
+        ),
+
+        focusedBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(30),
+          borderSide: const BorderSide(
+            color: AppColors.primary,
+            width: 1.5
           )
         )
       ),
@@ -70,14 +78,21 @@ class AppTheme {
           borderRadius: BorderRadius.circular(30),
           borderSide: const BorderSide(
             color: Colors.white,
-            width: 0.4
+            width:1
           )
         ),
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(30),
           borderSide: const BorderSide(
             color: Colors.white,
-            width: 0.4
+            width: 1
+          )
+        ),
+        focusedBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(30),
+          borderSide: const BorderSide(
+            color: AppColors.primary,
+            width: 1.5,
           )
         )
       ),
