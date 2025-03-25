@@ -3,11 +3,13 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:spotify_clone/core/utils/theme/font_weight_helper.dart';
 
 class AppStyles {
-  static TextStyle font24BlackBold = TextStyle(
-      fontSize: 24.sp, fontWeight: FontWeightHelper.bold, color: Colors.black);
+  static TextStyle font24WhiteBold = TextStyle(
+      fontSize: 24.sp, fontWeight: FontWeightHelper.bold, color: Colors.white);
 
   static TextStyle font18WhiteBold = TextStyle(
       fontSize: 18.sp, fontWeight: FontWeightHelper.bold, color: Colors.white);
+      static TextStyle font20WhiteBold = TextStyle(
+      fontSize: 20.sp, fontWeight: FontWeightHelper.bold, color: Colors.white);
 
   static TextStyle font13GreyMedium = TextStyle(
       fontSize: 13.sp, fontWeight: FontWeightHelper.medium, color: Colors.grey);
@@ -18,8 +20,8 @@ class AppStyles {
       static TextStyle font18WhiteSemiBold = TextStyle(
       fontSize: 18.sp, fontWeight: FontWeightHelper.semiBold, color: Colors.white);
 
-      static TextStyle font16GreyRegular = TextStyle(
-      fontSize: 16.sp, fontWeight: FontWeightHelper.regular, color: Colors.grey);
+      static TextStyle font16WhiteRegular = TextStyle(
+      fontSize: 16.sp, fontWeight: FontWeightHelper.regular, color: Colors.white);
   
   
   

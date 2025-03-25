@@ -40,7 +40,8 @@ class _SplashViewState extends State<SplashView> {
   Future<void> navigatToGetStartedView() async {
     await Future.delayed(const Duration(seconds:3));
 
-    GoRouter.of(context).pushReplacement(AppRouter.kGetStartedView);
+   GoRouter.of(context).pushReplacement(AppRouter.kGetStartedView);
+   // Navigator.pushReplacement(context,MaterialPageRoute(builder: (context) => const GetSrartedView()));
     
   }
 }

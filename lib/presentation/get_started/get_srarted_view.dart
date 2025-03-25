@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
-import 'package:spotify_clone/core/utils/routing/app_router.dart';
 import 'package:spotify_clone/core/utils/assets/app_assets.dart';
 import 'package:spotify_clone/core/utils/constant/spacing.dart';
+import 'package:spotify_clone/core/utils/routing/app_router.dart';
 import 'package:spotify_clone/core/utils/theme/app_styles.dart';
 import 'package:spotify_clone/core/widgets/custom_app_buttom.dart';
+
 
 class GetSrartedView extends StatelessWidget {
   const GetSrartedView({super.key});
@@ -29,6 +30,7 @@ class GetSrartedView extends StatelessWidget {
             
           ),
           Container(
+            // ignore: deprecated_member_use
             color: Colors.black.withOpacity(0.15),
           ),
           Padding(
@@ -47,13 +49,10 @@ class GetSrartedView extends StatelessWidget {
                   ),
             
                   verticalSpace(25),
-                  CustomAppButtom(
-                    title: 'Get Started',
-                    height: 80,
-                    onPressed: (){
-                      GoRouter.of(context).push(AppRouter.kChooseModeView);
-                    },
-                  ),
+                  CustomAppButtom(title: 'Get Started',onPressed: (){
+
+                    GoRouter.of(context).push(AppRouter.kChooseModeView);
+                  },),
             
                   verticalSpace(30)
             

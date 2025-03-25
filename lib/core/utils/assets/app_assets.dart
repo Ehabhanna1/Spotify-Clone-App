@@ -5,7 +5,7 @@ class AppAssets{
   static const String moon = 'assets/icons/moon.svg';
   static const String sun = 'assets/icons/sun.svg';
   static const String topPattern = 'assets/icons/top_pattern.svg';
-  static const String home = 'assets/icons/home_top_card.svg';
+  static const String homeTop = 'assets/icons/home_top_card.svg';
 
 
 
