@@ -1,3 +1,4 @@
+import 'package:dartz/dartz.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
@@ -8,9 +9,18 @@ import 'package:spotify_clone/core/utils/theme/app_colors.dart';
 import 'package:spotify_clone/core/utils/theme/app_styles.dart';
 import 'package:spotify_clone/core/widgets/custom_app_bar.dart';
 import 'package:spotify_clone/core/widgets/custom_app_buttom.dart';
+import 'package:spotify_clone/data/models/auth/create_user_request.dart';
+import 'package:spotify_clone/domain/use_case/auth/sign_up_use_case.dart';
+import 'package:spotify_clone/service_locator.dart';
 
 class SignUpView extends StatelessWidget {
-  const SignUpView({super.key});
+   SignUpView({super.key});
+
+
+
+  final TextEditingController _fullNameController = TextEditingController();
+  final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _passwordController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -37,7 +47,31 @@ class SignUpView extends StatelessWidget {
               verticalSpace(20),
               CustomAppButtom(
                 height: 80,
-                title: 'Sign Up' ,onPressed: () {
+                title: 'Sign Up' ,
+                onPressed: () async{
+                  var result = await serviceLocator<SignUpUseCase>().call(
+                    params: CreateUserRequest(
+                      email: _emailController.text.toString(),
+                      password: _passwordController.text.toString(),
+                      fullName: _fullNameController.text.toString(),
+                    )
+                  );
+                  result.fold(
+                    (left){
+
+                    var snackBar = SnackBar(content: Text(left));
+                    ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                    },
+                    
+                    (r){
+
+                      GoRouter.of(context).push(AppRouter.kHomeView);
+
+
+
+                    },
+                    );
+
                 
               },),
 
@@ -54,14 +88,13 @@ class SignUpView extends StatelessWidget {
     );
   }
 
-
 Widget _signUpText(){
   return  Text("Sign Up", textAlign: TextAlign.center , style: AppStyles.font25Bold,);
 }
 
 Widget _fullNameTextField(BuildContext context){
   return  TextField(
-
+     controller: _fullNameController,
     decoration: InputDecoration(
       hintText: "Full Name",
      // hintStyle: AppStyles.font16Regular,
@@ -73,6 +106,7 @@ Widget _fullNameTextField(BuildContext context){
 
 Widget _emailTextField(BuildContext context){
   return  TextField(
+    controller: _emailController,
     decoration: InputDecoration(
       hintText: "Email",
       //hintStyle: AppStyles.font16Regular,
@@ -82,9 +116,9 @@ Widget _emailTextField(BuildContext context){
 
 }
 
-
  Widget _passwordTextField(BuildContext context){
   return  TextField(
+    controller: _passwordController,
     decoration: InputDecoration(
       hintText: "Password",
       //hintStyle: AppStyles.font16Regular,
@@ -113,5 +147,7 @@ Widget _signInText(BuildContext context){
 
 }
 
-}
 
+
+ 
+}

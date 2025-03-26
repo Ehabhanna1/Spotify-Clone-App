@@ -4,6 +4,7 @@ import 'package:spotify_clone/presentation/auth/view/sign_up_view.dart';
 import 'package:spotify_clone/presentation/auth/view/signin_or_singup_view.dart';
 import 'package:spotify_clone/presentation/choose%20mode/view/choose_mode_view.dart';
 import 'package:spotify_clone/presentation/get_started/get_srarted_view.dart';
+import 'package:spotify_clone/presentation/home/home_view.dart';
 import 'package:spotify_clone/presentation/splash/splash_view.dart';
 
 abstract class AppRouter {
@@ -23,8 +24,10 @@ abstract class AppRouter {
       GoRoute(path: kGetStartedView, builder: (context, state) => const GetSrartedView()),
       GoRoute(path: kChooseModeView, builder: (context, state) => const ChooseModeView()),
       GoRoute(path: kSignInOrSignUpView, builder: (context, state) => const SigninOrSingupView()),
-      GoRoute(path: kSignInView, builder: (context, state) => const SignInView()),
-      GoRoute(path: kSignUpView, builder: (context, state) => const SignUpView()),
+      GoRoute(path: kSignInView, builder: (context, state) =>  SignInView()),
+      GoRoute(path: kSignUpView, builder: (context, state) =>  SignUpView()),
+
+      GoRoute(path: kHomeView, builder: (context, state) => const HomeView()),
       
      
     ],
