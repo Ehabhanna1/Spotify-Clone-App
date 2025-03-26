@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:spotify_clone/core/helper/is_dark_mode.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
-  const CustomAppBar({super.key, this.title});
+  const CustomAppBar({super.key, this.title, this.hideBackArrow =false});
 
   final Widget ? title;
+  final bool hideBackArrow ;
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +14,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
       elevation: 0,
       title: title ?? const Text(""),
       centerTitle: true,
-      leading: IconButton(onPressed: () => Navigator.pop(context),
+      leading: hideBackArrow ? SizedBox() : IconButton(onPressed: () => Navigator.pop(context),
        icon: Container(
         height: 60,
         width: 60,

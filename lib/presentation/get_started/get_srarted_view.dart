@@ -49,7 +49,9 @@ class GetSrartedView extends StatelessWidget {
                   ),
             
                   verticalSpace(25),
-                  CustomAppButtom(title: 'Get Started',onPressed: (){
+                  CustomAppButtom(
+                    height: 70,
+                    title: 'Get Started',onPressed: (){
 
                     GoRouter.of(context).push(AppRouter.kChooseModeView);
                   },),

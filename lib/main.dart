@@ -11,6 +11,7 @@ import 'package:spotify_clone/firebase_options.dart';
 import 'package:spotify_clone/presentation/choose%20mode/logic/cubit/theming_cubit.dart';
 import 'package:spotify_clone/service_locator.dart';
 
+
 Future<void> main() async {
 
   // Initialize Hydrated Storage
@@ -25,6 +26,8 @@ Future<void> main() async {
   await Firebase.initializeApp(
     options:  DefaultFirebaseOptions.currentPlatform,
   );
+
+  
   // Dependencies Injection
   await initDependencies();
 
