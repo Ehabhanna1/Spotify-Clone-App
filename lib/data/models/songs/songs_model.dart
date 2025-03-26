@@ -1,25 +1,39 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:spotify_clone/domain/entities/songs/songs_entity.dart';
 
-class SongsModel {
+class SongModel {
+  String ? title;
+  String ? artist;
+  num ? duration;
+  Timestamp ? releaseDate;
+  bool ? isFavorite;
+  String ? songId;
 
+  SongModel({
+    required this.title,
+    required this.artist,
+    required this.duration,
+    required this.releaseDate,
+    required this.isFavorite,
+    required this.songId
+  });
 
-   String? title;
- String? artist;
- num? duration;
-  Timestamp? releaseDate;
-
-
-  SongsModel({required this.title,  required this.artist, required this.duration, required this.releaseDate});
-
-
-
-  SongsModel.fromJson(Map<String, dynamic> json) {
-    title = json['title'];
-    artist = json['artist'];
-    duration = json['duration'];
-    releaseDate = json['releaseDate'];
+  SongModel.fromJson(Map<String,dynamic> data) {
+    title = data['title'];
+    artist = data['artist'];
+    duration = data['duration'];
+    releaseDate = data['releaseDate'];
   }
+}
 
 
-
+extension SongsModelX on SongModel {
+  SongEntity toEntity() => SongEntity(
+    title: title!,
+    artist: artist!,
+    duration: duration!,
+    releaseDate: releaseDate!,
+    isFavorite: isFavorite!,
+    songId: songId!,
+  );
 }
