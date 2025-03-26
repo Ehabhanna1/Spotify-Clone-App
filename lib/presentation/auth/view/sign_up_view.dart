@@ -59,11 +59,16 @@ class SignUpView extends StatelessWidget {
                   result.fold(
                     (left){
 
-                    var snackBar = SnackBar(content: Text(left));
+                    var snackBar = SnackBar(content: Text(left,
+                    style: AppStyles.font16SemiBold.copyWith(color: Colors.white),
+                    
+                    
+                    ),
+                      backgroundColor: Colors.red, behavior: SnackBarBehavior.floating,);
                     ScaffoldMessenger.of(context).showSnackBar(snackBar);
                     },
                     
-                    (r){
+                    (right){
 
                       GoRouter.of(context).push(AppRouter.kHomeView);
 
