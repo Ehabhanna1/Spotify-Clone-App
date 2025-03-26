@@ -1,4 +1,4 @@
- abstract class AuthRepo 
+ abstract class AuthRepository 
  {
 
 
